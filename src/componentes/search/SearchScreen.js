@@ -17,6 +17,7 @@ export const SearchScreen = () => {
   const {searchText} =state;
   const heroes =useMemo(() => getHeroesByName(q), [q]) ;
   const handleSearch= (e) => {
+    console.log('111111111')
     e.preventDefault();
     console.log(searchText)
     navigate(`?q=${ searchText }`)
